@@ -18,17 +18,35 @@ and open the template in the editor.
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
-       
+
     </head>
     <body>
 
 
-        <div id="divone">divone</div>
-        <div id="divtwo">divtwo</div>
+        <!--        <div id="divone">divone</div>
+                <div id="divtwo">divtwo</div>-->
         <div>Greensock animations stdy</div>
+
+
+
+       
+
+        <!--<div id="theContainer">-->
+            <div id="circleDiv"></div>
+            <div id="smallCircle"></div>
+        <!--</div>-->
+
+        
+         <div id="buttonContainer">
+
+            <button class="button" id="button1" onclick="c1.restart();">Restart</button>
+            <button class="button" id="button2" onclick="c1.pause();">Pause</button>
+            <button class="button" id="button3" onclick="c1.seek(1);">Seek(1)</button>
+            <button class="button" id="button4" onclick="c1.resume();">Resume</button>
+
+        </div>
         
         
-        
-         <script src="script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

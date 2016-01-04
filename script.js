@@ -4,22 +4,55 @@
  * and open the template in the editor.
  */
 
+
+
+var currentWindow = window;
+var windowWidth = currentWindow.innerWidth;
+var windowHeight = currentWindow.innerHeight;
+
+
 var divTwo = document.getElementById("divtwo");
 var firstDivTwo = divTwo;
+
+var bigCircle = document.getElementById("circleDiv");
+var smallCircle = document.getElementById("smallCircle");
 
 //var tweenOne = new TweenLite(firstDivTwo, 1 , {width:"50%"});
 //
 //TweenLite.to(firstDivTwo, 1.5, {width:200});
 //TweenLite.to(firstDivTwo, 3.5, {width:400});
-var time1 = new TimelineLite();
-
-time1.pause();
-time1.to(firstDivTwo, 1, {width:"50%"});
-time1.to(firstDivTwo, 1 , {height:"400px"});
-time1.to(firstDivTwo, 1 , {opacity:0.5}, "+=0.75");
-time1.to(firstDivTwo, 1, {backgroundColor:"#FF0000"},"-=0.5");
-time1.add("myLabel", 3);
-//time1.pause();
+//var t1 = new TimelineLite();
 //
-time1.resume();
-time1.restart();
+
+
+var bigCircleDiameter = 150;
+
+var bigCircleScreenCenter = windowWidth / 2 - bigCircleDiameter / 2;
+console.log(bigCircleScreenCenter);
+
+
+
+
+
+var c1 = new TimelineMax();
+
+
+c1.to(bigCircle, 0.1, {x: bigCircleScreenCenter});
+
+
+
+c1.pause();
+
+c1.to(bigCircle, 2, {height: bigCircleDiameter, width: bigCircleDiameter});
+c1.to(bigCircle, 0.4, {border: "5px solid yellow"});
+
+
+c1.to(smallCircle, 0, {width: "10px", height: "10px"});
+//c1.to(smallCircle, 0 , {position: )
+
+
+
+
+c1.to(smallCircle, 5, {rotation: 720, transformOrigin: "left -75px"});
+
+//c1.resume();
